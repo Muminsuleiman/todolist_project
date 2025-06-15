@@ -2,7 +2,7 @@
 include_once __DIR__ . "/dbConnect.php";
 include_once __DIR__ . "/BaseModel.php";
 
-class CategoryModel extends BaseModel {
+class CategoryModel extends BaseModel implements ORMinterface {
     private $id;
     public $name;
 

@@ -1,0 +1,216 @@
+/* Reset some defaults */
+body, h1, h2, h3, h4, h5, h6, p, ul, li, form, input, button, textarea, select {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f6f8fa;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    color: #22223b;
+    min-height: 100vh;
+}
+
+/* Container for main content */
+.container {
+    max-width: 700px;
+    margin: 40px auto 0 auto;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    padding: 32px 36px 36px 36px;
+}
+
+/* Headings */
+h1 {
+    font-size: 2.2rem;
+    margin-bottom: 18px;
+    color: #22223b;
+}
+h2 {
+    font-size: 1.3rem;
+    margin: 24px 0 10px 0;
+    color: #4f8cff;
+}
+
+/* Task List */
+ul.tasks {
+    list-style: none;
+    margin: 0 0 24px 0;
+    padding: 0;
+}
+ul.tasks li {
+    background: #f1f3f8;
+    border-radius: 7px;
+    margin-bottom: 12px;
+    padding: 16px 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.03);
+}
+ul.tasks li .task-title {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #22223b;
+}
+ul.tasks li .task-category {
+    font-size: 0.95rem;
+    color: #4f8cff;
+    font-weight: 500;
+}
+ul.tasks li .task-desc {
+    font-size: 0.98rem;
+    color: #444;
+}
+ul.tasks li .task-status {
+    font-size: 0.95rem;
+    color: #888;
+}
+
+/* Add Task Form */
+.add-task-form {
+    display: flex;
+    gap: 10px;
+    margin-top: 18px;
+    flex-wrap: wrap;
+}
+.add-task-form input[type="text"],
+.add-task-form textarea,
+.add-task-form select {
+    padding: 8px 10px;
+    border: 1px solid #bfc0c0;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border 0.2s;
+}
+.add-task-form input[type="text"]:focus,
+.add-task-form textarea:focus,
+.add-task-form select:focus {
+    border: 1.5px solid #4f8cff;
+    outline: none;
+}
+.add-task-form textarea {
+    resize: vertical;
+    min-height: 32px;
+    max-height: 80px;
+}
+.add-task-form button {
+    background: #4f8cff;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 18px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.add-task-form button:hover {
+    background: #2563eb;
+}
+
+/* Auth Forms (login/register) */
+.auth-container {
+    background: #fff;
+    max-width: 350px;
+    margin: 80px auto;
+    padding: 32px 28px 24px 28px;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    text-align: center;
+}
+.auth-container h1 {
+    margin-bottom: 24px;
+    font-size: 2rem;
+    color: #22223b;
+}
+.auth-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+.auth-container input[type="text"],
+.auth-container input[type="password"] {
+    padding: 10px 12px;
+    border: 1px solid #bfc0c0;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border 0.2s;
+}
+.auth-container input[type="text"]:focus,
+.auth-container input[type="password"]:focus {
+    border: 1.5px solid #4f8cff;
+    outline: none;
+}
+.auth-container button {
+    background: #4f8cff;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 0;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.auth-container button:hover {
+    background: #2563eb;
+}
+.auth-container .register-link {
+    margin-top: 18px;
+    font-size: 0.97rem;
+}
+.auth-container .register-link a {
+    color: #4f8cff;
+    text-decoration: none;
+    font-weight: 500;
+}
+.auth-container .register-link a:hover {
+    text-decoration: underline;
+}
+.auth-container .error {
+    color: #e63946;
+    margin-bottom: 10px;
+    font-size: 0.98rem;
+}
+
+/* Logout link and welcome */
+.header-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+.header-bar .welcome {
+    font-size: 1.05rem;
+    color: #22223b;
+}
+.header-bar .logout-link {
+    color: #e63946;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 18px;
+}
+.header-bar .logout-link:hover {
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 800px) {
+    .container {
+        max-width: 98vw;
+        padding: 18px 4vw;
+    }
+}
+@media (max-width: 500px) {
+    .auth-container, .container {
+        max-width: 99vw;
+        padding: 10px 2vw;
+    }
+    .add-task-form {
+        flex-direction: column;
+        gap: 8px;
+    }
+}

@@ -2,7 +2,7 @@
 include_once __DIR__ . "/dbConnect.php";
 include_once __DIR__ . "/BaseModel.php";
 
-class TodoModel extends BaseModel {
+class TodoModel extends BaseModel implements ORMinterface {
     private $id;
     public $title;
     public $description;
